@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="C:\Users\ASUS\AppData\Roaming\Microsoft\Windows\Network Shortcuts\ManagerSer.cs" Link="ManagerSer.cs" />
+    <Compile Include="C:\Users\ASUS\AppData\Roaming\Microsoft\Windows\Network Shortcuts\ManagerSer.cs" Link="Qrupmenecer\ManagerSer.cs" />
   </ItemGroup>
 
 </Project>
