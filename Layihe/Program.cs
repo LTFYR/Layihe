@@ -1,4 +1,5 @@
 ﻿using Layihe.Enum;
+using Layihe.Groupmanager;
 using Layihe.Interface;
 using System;
 
@@ -6,8 +7,15 @@ namespace Layihe
 {
     internal class Program
     {
+        private static string fullname;
+        private static string groupNo;
+        private static string no;
+        private static string newNo;
         static void Main(string[] args)
         {
+            
+
+
             int selection;
 
             do
@@ -21,72 +29,53 @@ namespace Layihe
                 Console.WriteLine("|4. Qrupdaki telebelerin siyahisi|");
                 Console.WriteLine("|5. Butun telebelerin siyahisi   |");
                 Console.WriteLine("|6. Telebe yarat                 |");
-                Console.WriteLine("|7. Cixis                        |");
+                Console.WriteLine("|0. Cixis                        |");
                 Console.WriteLine("+--------------------------------+");
                 Console.Write("Seciminiz: \n");
 
 
-                //    string strSelection = Console.ReadLine();
-                //    bool result = int.TryParse(strSelection, out selection);
-                //    if (result)
-                //    {
-                //        switch (selection)
-                //        {
-                //            case 1:
-
-                //                Console.WriteLine("Zehmet olmasa qrup nomresi daxil edin");
-                //                string No;
-                //                string NoStr = Console.ReadLine();
-                //                bool resultNo = int.TryParse(NoStr , out);
-
-                //                if (resultNo)
-                //                {
-                //                    foreach (Category cat in System.Enum.GetValues(typeof(Category)))
-                //                    {
-                //                        Console.WriteLine("{(int)cat}. { cat}");
-                //                    }
-                //                }
-                //                int category;
-                //                string categoryStr= Console.ReadLine();
-                //                bool resultcategory = int.TryParse(categoryStr, out category);
-                //                if  (resultcategory)
-                //                {
-                //                    switch (category)
-                //                    {
-                //                        case (int)Category.Programming:
-
-
-                //                        default:
-                //                            Console.WriteLine("Xeta bas verdi";); 
-                //                            break;
-                //                    }
-
-
-                //                }
 
 
 
+                string strSelection = Console.ReadLine();
+                bool result = int.TryParse(strSelection, out selection);
 
-                //                else
-                //                {
-                //                    Console.WriteLine("Zehmet olmasa dogru qrup id-si daxil edin");
-                //                }
+                if (result)
+                {
+                    switch (selection)
+                    {
+                        case 1:
+                            ManagerSer.QrupYaratMenu();
+                            break;
+                        case 2:
+                            ManagerSer.Qruplarinsiyahisi();
+                            break;
+                        case 3:
+                            ManagerSer.DuzelisEtMenu();
 
-                //            default:
-                //                break;
-                //                break;
-                //        }
-                //    }
+                            break;
+                        case 4:
 
-                //} while (selection != 0);
+                            break;
+                        case 5:
+                            ManagerSer.ButunTelebelerinSiyahisiMenu();
 
-        //    }
-        //private static void GrouplarinSiyahisi()
-        //    {
-        //        foreach (var item in collection)
-        //        {
+                            break;
+                        case 6:
+                            ManagerSer.TelebeYaratMenu();
+                            break;
+                        case 0:
+                            break;
+                        default:
+                            Console.WriteLine("Yanlis melumat daxil edildi");
+                            break;
+                    }
+                }
+            }
 
-        //        }
-            //}
+            while (selection != 0);
+
         }
     }
+    
+}
